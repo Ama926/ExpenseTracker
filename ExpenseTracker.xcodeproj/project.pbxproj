@@ -11,6 +11,8 @@
 		81E8B2532AB9E8970099D1C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8B2522AB9E8970099D1C1 /* ContentView.swift */; };
 		81E8B2552AB9E8980099D1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E8B2542AB9E8980099D1C1 /* Assets.xcassets */; };
 		81E8B2582AB9E8980099D1C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E8B2572AB9E8980099D1C1 /* Preview Assets.xcassets */; };
+		81E8B2602AB9F3060099D1C1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8B25F2AB9F3060099D1C1 /* LoginView.swift */; };
+		81E8B2622ABA01850099D1C1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8B2612ABA01850099D1C1 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		81E8B2522AB9E8970099D1C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81E8B2542AB9E8980099D1C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81E8B2572AB9E8980099D1C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		81E8B25F2AB9F3060099D1C1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		81E8B2612ABA01850099D1C1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		81E8B24F2AB9E8970099D1C1 /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				81E8B25E2AB9F2CA0099D1C1 /* View */,
 				81E8B2502AB9E8970099D1C1 /* ExpenseTrackerApp.swift */,
 				81E8B2522AB9E8970099D1C1 /* ContentView.swift */,
 				81E8B2542AB9E8980099D1C1 /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				81E8B2572AB9E8980099D1C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		81E8B25E2AB9F2CA0099D1C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81E8B25F2AB9F3060099D1C1 /* LoginView.swift */,
+				81E8B2612ABA01850099D1C1 /* SignUpView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E8B2622ABA01850099D1C1 /* SignUpView.swift in Sources */,
+				81E8B2602AB9F3060099D1C1 /* LoginView.swift in Sources */,
 				81E8B2532AB9E8970099D1C1 /* ContentView.swift in Sources */,
 				81E8B2512AB9E8970099D1C1 /* ExpenseTrackerApp.swift in Sources */,
 			);
@@ -266,9 +282,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -283,6 +300,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nibm.ExpenseTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,9 +312,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -311,6 +330,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nibm.ExpenseTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
