@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct LoginView: View {
+    @Binding var currentShowingView: String
+    @AppStorage("uid") var userID: String = ""
+    
     @State private var email: String = ""
     @State private var password: String = ""
     var body: some View {
@@ -63,7 +67,11 @@ struct LoginView: View {
                 )
                 .padding()
                 
-                Button(action: {}){
+                Button(action: {
+                    withAnimation{
+                        self.currentShowingView = "signup"
+                    }
+                }){
                     Text("Don't have an account?")
                         .foregroundColor(.black.opacity(0.7))
                 }
@@ -71,6 +79,20 @@ struct LoginView: View {
                 Spacer()
                 
                 Button{
+                    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        
+                        if let authResult = authResult{
+                            print(authResult.user.uid)
+                            withAnimation{
+                                userID = authResult.user.uid
+                            }
+                        }
+                        
+                    }
                 
                 } label: {
                     Text("Sign In")
@@ -94,8 +116,4 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+
